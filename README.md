@@ -32,8 +32,8 @@ Examples:
 docker run -i --rm mribeiro/xmllint --help
 
 # Lint foo.xml to stdout
-docker run -i --rm mribeiro/xmllint foo.xml
+docker run -i --rm -v $PWD:/data mribeiro/xmllint foo.xml
 
 # Validate foo.xml against foo.xsd schema
-docker run -i --rm mribeiro/xmllint --schema foo.xsd foo.xml
+docker run -i --rm -v $PWD:/data mribeiro/xmllint --schema foo.xsd foo.xml
 ```
