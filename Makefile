@@ -7,18 +7,15 @@
 DOCKER ?= /usr/bin/docker
 
 # Constants
-CONTAINER_NS = mribeiro
-CONTAINER_REPO = xmllint
-UID = $(id -u)
-GID = $(id -g)
+IMAGE = mribeiro/xmllint
+
+.PHONY: test
 
 build-image:
-	$(DOCKER) build -t $(CONTAINER_NS)/$(CONTAINER_REPO) image
+	$(DOCKER) build -t $(IMAGE) image
 
-run:
-	$(DOCKER) run \
-		--rm -i --user=$(UID):$(GID) \
-		$(CONTAINER_NS)/$(CONTAINER_REPO) \
-		$@
-
-default: run
+test:
+	$(DOCKER) run --rm -i \
+		-v $(PWD)/test:/data \
+		$(IMAGE) \
+		--noout --valid --schema /data/simple.xsd /data/simple.xml
