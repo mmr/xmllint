@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<simple author="Marcio Ribeiro" xmlns="http://b1n.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://b1n.org simple.xsd">
+    <foo>bar</foo>
+</simple>

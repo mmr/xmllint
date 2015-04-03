@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:b1n="http://b1n.org"
+    targetNamespace="http://b1n.org"
+    elementFormDefault="qualified">
+
+    <xs:element name="simple">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="foo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
