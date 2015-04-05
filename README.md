@@ -5,6 +5,7 @@ XML Linter
 
 Setup
 -----
+
 It uses docker to make the setup simpler, so you will not have to install all the dependencies manually.
 
 All you have to do is:
@@ -15,10 +16,12 @@ All you have to do is:
 sudo usermod -aG docker <your_user>
 ```
 * Pull image ([from Hub](https://registry.hub.docker.com/u/mribeiro/xmllint)):
+
 ```bash
 docker pull mribeiro/xmllint
 ```
 or build locally using this repo (which is way much cooler):
+
 ```bash
 make build-image
 ```
@@ -26,7 +29,9 @@ make build-image
 Usage:
 -----
 Use it as you would use the xmllint command.
+
 Examples:
+
 ```bash
 # Show xmllint help
 docker run -i --rm mribeiro/xmllint --help
@@ -37,3 +42,4 @@ docker run -i --rm -v $PWD:/data mribeiro/xmllint foo.xml
 # Validate foo.xml against foo.xsd schema
 docker run -i --rm -v $PWD:/data mribeiro/xmllint --schema foo.xsd foo.xml
 ```
+
