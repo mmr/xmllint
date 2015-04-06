@@ -9,6 +9,7 @@
             <xs:sequence>
                 <xs:element name="foo" type="xs:string"/>
             </xs:sequence>
+            <xs:attribute name="author" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
